@@ -29,7 +29,15 @@ void testUnsortedArray()
 // This is intentionally incomplete for TDD demonstration
 bool isSorted(const int* arr, const int size)
 {
-    return false;
+    for (int i = 0; i < size - 1; i++)
+    {
+        if (arr[i] > arr[i + 1])
+        {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 int main()
